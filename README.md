@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+Secondhand Movies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tasks
 
-## Available Scripts
+Task 1: Display the film collection
 
-In the project directory, you can run:
+Make a website with a title, and a collection of films for sale.
 
-### `npm start`
+Display a list to browse with each film title, the year it was made, the price, whether it's in stock, and each of its genres.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This should display as a grid on large screens, and be responsive so I can use the site on mobile.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To the task we will use first the vanilla HTML and CSS, before starting to use React.
+![](images/WireframeDesktop.png)
 
-### `npm test`
+Task 2: Shopping Cart
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Add a basket to the site, with a buy button. On small screens, I should see the amount of money and the number of items in my basket. On large screens, I should also be able to see all the items in my basket.
 
-### `npm run build`
+Add a button to each DVD listing.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+When the button is clicked, that DVD title should be added to my basket, and the cost of the basket should be updated.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+When the user click the Buy button, it should show a confirmation message, and clear the items in the basket.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Task 3: Display stock
 
-### `npm run eject`
+If it's out of stock, display "Out of Stock" in red, bold text instead of the Buy button.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+If the stock is less than 10, display "Only x left in stock", where x is the quantity.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Task 4: Remove basket items
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Add a button to each item in the cart, so that I can remove an item in the cart if I no longer want it.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Task 5: Filter by genre
 
-## Learn More
+Add buttons to filter by genre. These genres should be based on the genres in the data, when I click on one I should only see films that match that genre.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Task 6: Pagination
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Display 20 films per page. Provide buttons that allow me to navigate between each page of films, and make it clear what page I'm on, out of how many total pages.
 
-### Code Splitting
+Task 7: Search
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Add a search bar. When I type at least three characters into the search bar, it should update the list of films to only show ones that have fully or partially matching titles. It should not be case sensitive.
 
-### Analyzing the Bundle Size
+Task 8: Sort by release year
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Give me the ability to sort the films. Add the option "Year (oldest to newest)" and "Year (newest to oldest)". When I select a sort, it should show me the films in the correct order.
 
-### Making a Progressive Web App
+Task 9: Sort by price
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Give me the ability to sort the films. Add the options: "Price (lowest to highest)" and "Price (highest to lowest)". When I select a sort, it should show me the films in the correct order.
 
-### Advanced Configuration
+Task 10: Store cart
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Use localStorage to save the items in my cart, so that I can leave the website and come back, without losing my cart.
