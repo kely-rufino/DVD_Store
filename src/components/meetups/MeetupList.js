@@ -11,7 +11,7 @@ function MeetupList(props){
                 movie={meetup.movie}
                 genre={meetup.genre}
                 year={meetup.year}
-                blueray={meetup.blueray}
+                price={meetup.price}
                 stock={meetup.stock}
                 />
                 ))}

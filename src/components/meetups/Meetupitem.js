@@ -13,7 +13,6 @@ function MeetupItem(props){
             <p>{props.genre}</p>
             <p>{props.year}</p>
             <p>{props.price}</p>
-            <p>{props.blueray}</p>
             <p>Stock: {props.stock}</p>
         </div>
         <div className={classes.actions}>
