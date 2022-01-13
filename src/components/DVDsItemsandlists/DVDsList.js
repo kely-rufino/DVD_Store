@@ -1,9 +1,8 @@
 import DVDsItem from './DVDsItem';
-import classes from './DVDsList.css';
 
 function DVDsList(props){
     return (   
-        <ul className={classes.list}>
+        <ul>
             {props.DVDs.map(DVD => ( <DVDsItem
                 key={DVD.id}
                 id={DVD.id}
