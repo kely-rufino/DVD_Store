@@ -1,18 +1,14 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-import AllMeetupsPage from './pages/AllMeetups';
+import AllDVDsPage from './pages/AllDVDs.js';
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
-      
+      <BrowserRouter>      
         <Routes>
-          <Route path='/' element={<AllMeetupsPage/>}></Route>
-        </Routes>
-      
+          <Route path='/' element={<AllDVDsPage/>}></Route>
+        </Routes>      
       </BrowserRouter>
-
     </div>
   );
 }

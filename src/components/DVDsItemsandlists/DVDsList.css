@@ -1,8 +1,7 @@
-
 .list {
-
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     gap: 5px;
     list-style: none;
     margin: 0;
@@ -11,7 +10,6 @@
 
   @media only screen and (max-width: 600px) {
     .list {
-
       display: grid;
       grid-template-columns: auto auto auto;
 
