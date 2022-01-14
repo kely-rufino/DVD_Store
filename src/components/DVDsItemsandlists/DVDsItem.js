@@ -9,7 +9,7 @@ function DVDsItem(props){
         </div>
         <div className={classes.content}>
             <h3>{props.movie}</h3>
-            <p>{props.genre}</p>
+            <p>{props.genre.join(" | ")}</p>
             <p>{props.year}</p>
             <p>{props.price}</p>
             <p>Stock: {props.stock}</p>
