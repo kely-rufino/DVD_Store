@@ -1,9 +1,11 @@
+import './DVDsItem.css';
 import DVDsItem from './DVDsItem';
 
 function DVDsList(props){
-    return (   
-        <ul>
-            {props.DVDs.map(DVD => ( <DVDsItem
+    return (
+        <div className="dvdContainer">
+        {props.DVDs.map(DVD => (
+            <DVDsItem
                 key={DVD.id}
                 id={DVD.id}
                 title={DVD.title}
@@ -14,7 +16,7 @@ function DVDsList(props){
                 stock={DVD.stock}
                 />
                 ))}
-        </ul>
+        </div>
         )
 }
 export default DVDsList;
