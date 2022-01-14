@@ -4,7 +4,7 @@ function DVDsItem(props){
     return (
     <div>
     <ul>
-    <li>        
+    <li>
         <div className={classes.image}>
         </div>
         <div className={classes.content}>
