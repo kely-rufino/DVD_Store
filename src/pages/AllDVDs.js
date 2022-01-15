@@ -10,16 +10,21 @@ function AllDVDsPage() {
   const [selectedGenre, setSelectedGenre] = useState(" ");
 
   const [selectedPage, setSelectedPage] = useState(1);
+  const [searchCriteria, setSearchCriteria] = useState("");
 
   const filteredMovies = DVDsStorage.filter((item) => {
     return selectedGenre === " " ? true : item.genre.includes(selectedGenre);
+  }).filter((item) => {
+    return searchCriteria !== ""
+      ? item.movie.toLowerCase().search(searchCriteria.toLowerCase()) !== -1
+      : true;
   });
 
   const movies = filteredMovies.slice(
     (selectedPage - 1) * pageSize,
     selectedPage * pageSize
   );
-  
+
   useEffect(() => {
     setSelectedPage(1);
   }, [selectedGenre]);
@@ -43,6 +48,13 @@ function AllDVDsPage() {
         pageSize={pageSize}
       />
       <h1>All DVDs</h1>
+      <div>
+        <input
+          type="search"
+          onChange={(e) => setSearchCriteria(e.target.value)}
+          placeholder="Search here..."
+        />
+      </div>
       <FilterGenre onChange={setSelectedGenre} selectedGenre={selectedGenre} />
       <DVDsList DVDs={movies} />
     </section>
