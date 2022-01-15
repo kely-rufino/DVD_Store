@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Cartstorage from '../components/Cartstorage';
 import DVDsList from '../components/DVDsItemsandlists/DVDsList';
+import RemoveItemfunc from '../components/RemoveItemfunc';
       
 function AllDVDsPage(props) {
   const [DVDsStorge, LoadDVDsStorge] = useState([]);

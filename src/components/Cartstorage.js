@@ -7,11 +7,14 @@ function Cartstorage(props) {
         <div>
             <h1>Your Cart</h1>
                 <div>
-                    {props.cart === [] ? "" : props.cart.map((item, i) =>
+                    {props.cart.map((item, i) =>
                         <div key={i} className="cartItem">
                             <p>{item}</p>
-                        </div>                
+                            <RemoveItemfunc cart = {props.cart} setCart = {props.setCart} totalcost = {props.totalcost} setTotalcost = {props.setTotalcost} selecteditem = {item}/>
+                        </div>
+                                   
                     )}
+                    
                 </div>
                
             <h1>Total : £{props.totalcost}</h1>
@@ -19,5 +22,3 @@ function Cartstorage(props) {
     )
 }
 export default Cartstorage;
-
-//

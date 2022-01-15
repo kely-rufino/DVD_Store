@@ -5,6 +5,7 @@ import { useState } from 'react';
 function App() {
 
   const [ cart, setCart ] = useState ([])
+  const [ products, setProducts] = useState ([])
   const [ totalcost, setTotalcost] = useState(0)
 
   return (

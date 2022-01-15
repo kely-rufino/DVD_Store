@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import AddItemfunc from '../AddItemfunc';
+import RemoveItemfunc from '../RemoveItemfunc';
 import './DVDsItem.css';
 
 function DVDsItem(props){
@@ -30,7 +31,7 @@ const removeFromCart = (removeTheDvd) => {
             <p>£ {props.price.split("£")}</p>
             <p>Stock: {props.stock}</p>
         </div>
-        <AddItemfunc movie = {props.movie} price = {props.price} cart = {props.cart} setCart={props.setCart} totalcost = {props.totalcost} setTotalcost={props.setTotalcost} />        
+        <AddItemfunc movie = {props.movie} price = {props.price} cart = {props.cart} setCart={props.setCart} totalcost = {props.totalcost} setTotalcost={props.setTotalcost} />
     </div>
     )
     

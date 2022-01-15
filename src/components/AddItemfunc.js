@@ -7,8 +7,8 @@ function AddItemfunc(props) {
         props.setCart([...props.cart, props.movie])
         const number = Number(props.price.replace(/[^0-9.-]+/g,""));        
         props.setTotalcost(props.totalcost + number) 
-        console.log(props.totalcost)
-        props.cart.map((item, i) => {console.log(item)})
+        //console.log(props.totalcost)
+        //props.cart.map((item, i) => {console.log(item)})
     }
 
     return (
