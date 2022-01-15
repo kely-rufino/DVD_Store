@@ -1,5 +1,6 @@
 import { Pagination } from "@material-ui/lab";
-
+import { isEndOfRange } from "@mui/lab/internal/pickers/date-utils";
+import "./DVDsPagination.css"
 
 
 function DVDsPagination({ numberOfMovies, onChange, pageSize }) {
@@ -7,7 +8,7 @@ function DVDsPagination({ numberOfMovies, onChange, pageSize }) {
   
 
   return (
-    <div>
+    <div className= "pagination">
       <Pagination
         count={count}
         onChange={(x, y) => onChange(y)}

@@ -42,11 +42,7 @@ function AllDVDsPage() {
   console.log(movies.length, selectedPage);
   return (
     <section>
-      <DVDsPagination
-        onChange={setSelectedPage}
-        numberOfMovies={filteredMovies.length}
-        pageSize={pageSize}
-      />
+     
       <h1>All DVDs</h1>
       <div>
         <input
@@ -57,6 +53,11 @@ function AllDVDsPage() {
       </div>
       <FilterGenre onChange={setSelectedGenre} selectedGenre={selectedGenre} />
       <DVDsList DVDs={movies} />
+      <DVDsPagination
+        onChange={setSelectedPage}
+        numberOfMovies={filteredMovies.length}
+        pageSize={pageSize}
+      />
     </section>
   );
 }
