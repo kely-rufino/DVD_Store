@@ -5,14 +5,19 @@ import { useState } from 'react';
 function App() {
 
   const [ cart, setCart ] = useState ([])
-  const [ products, setProducts] = useState ([])
+  const [ DVDsStorge, LoadDVDsStorge ] = useState([])
   const [ totalcost, setTotalcost] = useState(0)
 
   return (
     <div>
       <BrowserRouter>      
         <Routes>
-          <Route path='/' element={<AllDVDsPage cart={cart} setCart={setCart} totalcost={totalcost} setTotalcost={setTotalcost}/>}></Route>
+          <Route path='/' element={<AllDVDsPage cart={cart} 
+                                                setCart={setCart}
+                                                DVDsStorge = {DVDsStorge}
+                                                LoadDVDsStorge={LoadDVDsStorge}
+                                                totalcost = {totalcost}
+                                                setTotalcost={setTotalcost}/>}></Route>
         </Routes>      
       </BrowserRouter>
     </div>

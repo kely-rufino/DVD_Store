@@ -4,11 +4,8 @@ function AddItemfunc(props) {
    // const [ totalcost, setTotalcost] = useState(0)
 
     const addtoCart = (props) => {
-        props.setCart([...props.cart, props.movie])
-        const number = Number(props.price.replace(/[^0-9.-]+/g,""));        
-        props.setTotalcost(props.totalcost + number) 
-        //console.log(props.totalcost)
-        //props.cart.map((item, i) => {console.log(item)})
+        props.setCart([...props.cart, props.DVD])
+        props.setTotalcost(props.totalcost + Number(props.DVD.price.replace(/[^0-9.-]+/g,"")))
     }
 
     return (
