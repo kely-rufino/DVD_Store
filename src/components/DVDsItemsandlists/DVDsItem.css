@@ -19,6 +19,16 @@
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
+
+  .cartItem {
+    text-align: center;
+    width: 250px;
+    margin: 1rem 0;
+    padding : 1rem;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
   
   .image {
     width: 100%;

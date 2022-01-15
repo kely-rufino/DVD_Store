@@ -14,6 +14,10 @@ function DVDsList(props){
                 year={DVD.year}
                 price={DVD.price}
                 stock={DVD.stock}
+                cart = {props.cart} 
+                setCart={props.setCart} 
+                totalcost = {props.totalcost} 
+                setTotalcost={props.setTotalcost}
                 />
                 ))}
         </div>
