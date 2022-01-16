@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import Cartstorage from '../components/Cartstorage';
 import DVDsList from '../components/DVDsItemsandlists/DVDsList';
-import RemoveItemfunc from '../components/RemoveItemfunc';
       
 function AllDVDsPage(props) {
+
+        const [openCart, setopenCart] = useState(false);
 
         fetch("DVDdata.json")
         .then(response => {
@@ -14,7 +16,9 @@ function AllDVDsPage(props) {
         return (
           <section>
             <h1>All DVDs</h1>
-            <Cartstorage cart = {props.cart} setCart = {props.setCart} totalcost = {props.totalcost} setTotalcost = {props.setTotalcost}/>          
+            <button className='btn' onClick={()=>setopenCart(true)}>Check Out<span> ({props.cart.length})</span></button>
+            <button className='btn' onClick={()=>setopenCart(false)}>Close Check Out</button>
+            {openCart && <Cartstorage cart = {props.cart} setCart = {props.setCart} totalcost = {props.totalcost} setTotalcost = {props.setTotalcost}/>}          
             <DVDsList DVDsStorge={props.DVDsStorge} cart = {props.cart} setCart={props.setCart} totalcost = {props.totalcost} setTotalcost={props.setTotalcost}/>            
           </section>
         );

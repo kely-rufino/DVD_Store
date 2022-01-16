@@ -6,7 +6,7 @@ function App() {
 
   const [ cart, setCart ] = useState ([])
   const [ DVDsStorge, LoadDVDsStorge ] = useState([])
-  const [ totalcost, setTotalcost] = useState(0)
+  const [ totalcost, setTotalcost] = useState(0.0)
 
   return (
     <div>
