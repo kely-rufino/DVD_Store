@@ -27,7 +27,6 @@ function AllDVDsPage() {
       const priceB = Number.parseFloat(b.price.replace("£", ""));
       return selectedSort === "asc" ? priceA - priceB : priceB - priceA;
     });
-  console.log(filteredMovies);
 
   const movies = filteredMovies.slice(
     (selectedPage - 1) * pageSize,

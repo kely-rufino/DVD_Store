@@ -1,5 +1,6 @@
 import './DVDsItem.css';
 
+
 function DVDsItem(props){
     return (
     <div className="dvdItem">
