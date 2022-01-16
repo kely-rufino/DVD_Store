@@ -5,7 +5,6 @@ function CheckoutBox(props) {
         props.setTotalcost(0.0)
       }
 
-
     return(
         <div>
             <h1>Are you sure?</h1>

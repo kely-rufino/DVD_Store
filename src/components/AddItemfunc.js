@@ -1,7 +1,4 @@
 function AddItemfunc(props) {
-    
-    //const [ cart, setCart ] = useState ([])
-   // const [ totalcost, setTotalcost] = useState(0)
 
     const addtoCart = (props) => {
         props.setCart([...props.cart, props.DVD])

@@ -1,5 +1,4 @@
 import AddItemfunc from '../AddItemfunc';
-import RemoveItemfunc from '../RemoveItemfunc';
 import './DVDsItem.css';
 
 function DVDsItem(props){
