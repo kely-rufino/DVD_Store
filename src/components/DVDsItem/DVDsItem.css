@@ -1,56 +1,61 @@
-.dvdItem {
-  
-  text-align: center;
-  width: 250px;
-  height: 25%;
-  margin: 1rem 0;
+.dvdItem{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 2rem 0 1rem 0;
+  background-color: white;
   padding: 1rem;
-  background-color: rgb(238, 150, 150);
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
-.image {
+.content{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 2;
+}
+
+.image{
+  width: 200px;
+  max-width: 100px;
+}
+
+.image img{
   width: 100%;
-  height: 5rem;
-  overflow: hidden;
-  border-top-right-radius: 6px;
-  border-top-left-radius: 6px;
 }
 
-
-
-.image img {
-  width: 100%;
-  object-fit: cover;
+.product{
+  padding-left: 1rem;
 }
 
-.content {
-  text-align: center;
-  padding: 1rem;
+.product h3{
+  margin: 0
 }
 
-.content h3 {
-  font-size: 1.25rem;
-  color: #2c292b;
+.price-stock{
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 2;
 }
 
-.actions {
-  padding: 1.5rem;
-  text-align: center;
+.price-stock p{
+  font-size: large;
 }
 
-.actions button {
-  font: inherit;
+.buttonContainer{
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.buttonContainer button{
+  padding: 0.5rem 2rem;
   cursor: pointer;
-  color: #77002e;
-  border: 1px solid #77002e;
-  background-color: transparent;
-  padding: 0.5rem 1.5rem;
-  border-radius: 4px;
+  border: none;
+  border-radius: 7%;
 }
 
-.actions button:hover,
-.actions button:active {
-  background-color: #ffe2ed;
+button:hover{
+  background-color:lavender;
 }
+

@@ -55,30 +55,32 @@ function AllDVDsPage() {
         <div className="title">
           <h1>Just for Popcorn</h1>
         </div>
-        <div className="navBarItem">
-          <input
-            type="search"
-            onChange={(e) => setSearchCriteria(e.target.value)}
-            placeholder="Search here..."
-          />
-        </div>
-        <div className="navBarItem">
-          <FilterGenre
-            onChange={setSelectedGenre}
-            selectedGenre={selectedGenre}
-          />
-        </div>
-        <div className="navBarItem">
-          <select onChange={(e) => setSelectedSort(e.target.value)}>
-            <option value="asc">Price: low to high</option>
-            <option value="des">Price: high to low</option>
-          </select>
-        </div>
-        <div className="navBarItem">
-          <select onChange={(e) => setSelectedSortedYear(e.target.value)}>
-            <option value="asc">Year: low to high</option>
-            <option value="des">Year: high to low</option>
-          </select>
+        <div className="navBarItemContainer">
+          <div className="navBarItem">
+            <input
+              type="search"
+              onChange={(e) => setSearchCriteria(e.target.value)}
+              placeholder="Search here..."
+            />
+          </div>
+          <div className="navBarItem">
+            <FilterGenre
+              onChange={setSelectedGenre}
+              selectedGenre={selectedGenre}
+            />
+          </div>
+          <div className="navBarItem">
+            <select onChange={(e) => setSelectedSort(e.target.value)}>
+              <option value="asc">Price: low to high</option>
+              <option value="des">Price: high to low</option>
+            </select>
+          </div>
+          <div className="navBarItem">
+            <select onChange={(e) => setSelectedSortedYear(e.target.value)}>
+              <option value="asc">Year: low to high</option>
+              <option value="des">Year: high to low</option>
+            </select>
+          </div>
         </div>
       </div>
 
