@@ -20,7 +20,6 @@ function FilterGenre({ onChange, selectedGenre }) {
     "Film-Noir",
     "Mystery",
   ];
-console.log({selectedGenre})
   return (
     <select name="G" id="genre" onChange={(e) => onChange(e.target.value)}>
       {selectedGenre === " " ? <option>Select a genre</option> : null}
