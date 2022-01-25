@@ -2,16 +2,14 @@ import { useEffect, useState } from "react";
 import FilterGenre from "../components/FilterGenre";
 import DVDsList from "../components/DVDsList/DVDsList";
 import DVDsPagination from "../components/DVDsPagination/DVDsPagination";
-
 const pageSize = 20;
 
 function AllDVDsPage() {
   const [DVDsStorage, loadDVDsStorage] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState(" ");
-  const [selectedSort, setSelectedSort] = useState("asc");
+  const [selectedSort, setSelectedSort] = useState("price-asc");
   const [selectedPage, setSelectedPage] = useState(1);
   const [searchCriteria, setSearchCriteria] = useState("");
-  const [selectedSortedYear, setSelectedSortedYear] = useState("asc");
 
   const filteredMovies = DVDsStorage.filter((item) => {
     return selectedGenre === " " ? true : item.genre.includes(selectedGenre);
@@ -24,12 +22,28 @@ function AllDVDsPage() {
     .sort((a, b) => {
       const priceA = Number.parseFloat(a.price.replace("£", ""));
       const priceB = Number.parseFloat(b.price.replace("£", ""));
-      return selectedSort === "asc" ? priceA - priceB : priceB - priceA;
-    })
-    .sort((a, b) => {
-      return selectedSortedYear === "asc" ? a.year - b.year : b.year - a.year;
-    });
 
+      switch (selectedSort) {
+        case "price-asc":
+          if (priceA > priceB) return 1;
+          if (priceA < priceB) return -1;
+          break;
+        case "price-des":
+          if (priceA > priceB) return -1;
+          if (priceA < priceB) return 1;
+          break;
+        case "year-asc":
+          if (a.year > b.year) return 1;
+          if (a.year < b.year) return -1;
+          break;
+        case "year-des":
+          if (a.year > b.year) return -1;
+          if (a.year < b.year) return 1;
+          break;
+        default:
+        // code block
+      }
+    });
   const movies = filteredMovies.slice(
     (selectedPage - 1) * pageSize,
     selectedPage * pageSize
@@ -71,14 +85,10 @@ function AllDVDsPage() {
           </div>
           <div className="navBarItem">
             <select onChange={(e) => setSelectedSort(e.target.value)}>
-              <option value="asc">Price: low to high</option>
-              <option value="des">Price: high to low</option>
-            </select>
-          </div>
-          <div className="navBarItem">
-            <select onChange={(e) => setSelectedSortedYear(e.target.value)}>
-              <option value="asc">Year: low to high</option>
-              <option value="des">Year: high to low</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-des">Price: high to low</option>
+              <option value="year-asc">Year: low to high</option>
+              <option value="year-des">Year: high to low</option>
             </select>
           </div>
         </div>
